@@ -9,6 +9,7 @@ export class AppService {
   async getHello() {
     const cachedValue = await this.cacheManager.get('my_test_key');
     if (cachedValue) {
+      console.log(cachedValue);
       return cachedValue;
     }
 
